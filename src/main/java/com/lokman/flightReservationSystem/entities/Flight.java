@@ -3,22 +3,16 @@ package com.lokman.flightReservationSystem.entities;
 import java.sql.Timestamp;
 import java.util.Date;
 
-public class Flight {
-	private Long id;
+import javax.persistence.Entity;
+
+@Entity
+public class Flight extends AbstractEntity {
 	private int flightNumber;
 	private String operatingAirlines;
 	private String departureCity;
 	private String arivalCity;
 	private Date dateOfDeparture;
 	private Timestamp estimatedDepatureTime;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public int getFlightNumber() {
 		return flightNumber;
