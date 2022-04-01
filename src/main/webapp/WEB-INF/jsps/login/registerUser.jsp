@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>Register user</h2>
-	<form action="" method="post">
+	<form action="registerUser" method="post">
 	<pre>
 		First name:<input type="text" name="firstName"> 
 		Last name:<input type="text" name="lastName">
