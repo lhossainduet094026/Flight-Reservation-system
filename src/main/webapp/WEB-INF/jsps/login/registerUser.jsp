@@ -7,7 +7,7 @@
 <title>User registration page</title>
 </head>
 <body>
-<h2>Register user</h2>
+<h2>User Registration:</h2>
 	<form action="registerUser" method="post">
 	<pre>
 		First name:<input type="text" name="firstName"> 
