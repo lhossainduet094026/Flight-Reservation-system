@@ -3,6 +3,7 @@ package com.lokman.flightReservationSystem.entities;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
@@ -12,6 +13,8 @@ public class Flight extends AbstractEntity {
 	private String departureCity;
 	private String arrivalCity;
 	private Date dateOfDeparture;
+	
+	@Column(name = "estimated_departure_time")
 	private Timestamp estimatedDepatureTime;
 
 	public int getFlightNumber() {
