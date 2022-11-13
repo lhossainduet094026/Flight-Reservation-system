@@ -8,8 +8,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.lokman.flightReservationSystem.entities.Reservation;
-import com.lokman.flightReservationSystem.repositories.ReservationRepository;
+import com.lokman.flightReservationSystem.entities.Flight;
+import com.lokman.flightReservationSystem.repositories.FlightRepository;
 
 /**
  * @author lokman 8/11/2022
@@ -20,24 +20,25 @@ import com.lokman.flightReservationSystem.repositories.ReservationRepository;
 public class ReservationController {
 
 	@Autowired
-	private ReservationRepository reservationRepository;
+	private FlightRepository  flightRepository;
 	
 	@RequestMapping("/showCompleteReservation")
 	public String showCompleteReservation(@RequestParam("flightId") Long flightId, ModelMap modelMap) {
 		
 		System.out.println("flightId" + flightId);
-		
-		Optional<Reservation> reservationOptional = reservationRepository.findById(flightId);
-		
-		if(reservationOptional.isPresent()) {
-			Reservation reservation = reservationOptional.get();
-			System.out.println(reservation.getId());
-			System.out.println(reservation.getPassenger().getFirstName());
-			System.out.println(reservation.getFlight().getId());
-			modelMap.addAttribute("reservation", reservation);
+
+		Optional<Flight> flightOptional = flightRepository.findById(flightId);
+
+		if (flightOptional.isPresent()) {
+			Flight flight = flightOptional.get();
+			System.out.println(flight.getFlightNumber());
+			System.out.println(flight.getOperatingAirlines());
+			System.out.println(flight.getArivalCity());
+			System.out.println(flight.getDepartureCity());
+			
+			modelMap.addAttribute("flight", flight);
 		}
-		
-		
+
 		return "completeReservation";
 	}
 }
