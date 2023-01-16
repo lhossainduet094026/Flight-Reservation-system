@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.lokman.flightReservationSystem.Dtos.ReservationRequestDto;
 import com.lokman.flightReservationSystem.entities.Flight;
 import com.lokman.flightReservationSystem.repositories.FlightRepository;
 
@@ -36,5 +38,15 @@ public class ReservationController {
 		}
 
 		return "completeReservation";
+	}
+	
+	/**
+	 * @author lokman 17/1/2023
+	 * @param reservationRequestDto
+	 * @return
+	 */
+	@RequestMapping(value ="/completeReservation" , method = RequestMethod.POST)
+	public String completeReservation(ReservationRequestDto reservationRequestDto) {
+		return null;
 	}
 }
