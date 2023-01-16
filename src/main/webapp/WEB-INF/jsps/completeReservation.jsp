@@ -26,7 +26,6 @@
 		Card no :<input type="text" name="cardNo">
 		<br> Expire date: <input type="text" name="expireDate">
 		<br> Three digit sec:<input type="text" name="securityCode"> 
-		<input type="submit" value="Confirm">
 		<h2></h2>
 		<input type="hidden" name="flightId" value="${flight.id}">
 		<input type="submit" value="confirm">
