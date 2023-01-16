@@ -23,11 +23,13 @@
 
 		<h2>Card details</h2>
 		Name of the card:<input type="text" name="cardName"><br>
-		Card no :<input type="text" name="cardNo"><br> Expire
-		date: <input type="text" name="expireDate"><br> Three
-		digit sec:<input type="text" name="securityCode"> 
+		Card no :<input type="text" name="cardNo">
+		<br> Expire date: <input type="text" name="expireDate">
+		<br> Three digit sec:<input type="text" name="securityCode"> 
 		<input type="submit" value="Confirm">
 		<h2></h2>
+		<input type="hidden" name="flightId" value="${flight.id}">
+		<input type="submit" value="confirm">
 	</form>
 </body>
 </html>

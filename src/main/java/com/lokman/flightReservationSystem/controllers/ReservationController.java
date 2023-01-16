@@ -31,10 +31,6 @@ public class ReservationController {
 
 		if (flightOptional.isPresent()) {
 			Flight flight = flightOptional.get();
-			System.out.println(flight.getFlightNumber());
-			System.out.println(flight.getOperatingAirlines());
-			System.out.println(flight.getArivalCity());
-			System.out.println(flight.getDepartureCity());
 			
 			modelMap.addAttribute("flight", flight);
 		}

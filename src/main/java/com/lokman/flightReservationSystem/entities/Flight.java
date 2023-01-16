@@ -11,7 +11,10 @@ public class Flight extends AbstractEntity {
 	private int flightNumber;
 	private String operatingAirlines;
 	private String departureCity;
+	
+	@Column(name="arrival_city")
 	private String arrivalCity;
+	
 	private Date dateOfDeparture;
 	
 	@Column(name = "estimated_departure_time")
@@ -41,16 +44,16 @@ public class Flight extends AbstractEntity {
 		this.departureCity = departureCity;
 	}
 
-	public String getArivalCity() {
+	public Date getDateOfDeparture() {
+		return dateOfDeparture;
+	}
+
+	public String getArrivalCity() {
 		return arrivalCity;
 	}
 
-	public void setArivalCity(String arivalCity) {
-		this.arrivalCity = arivalCity;
-	}
-
-	public Date getDateOfDeparture() {
-		return dateOfDeparture;
+	public void setArrivalCity(String arrivalCity) {
+		this.arrivalCity = arrivalCity;
 	}
 
 	public void setDateOfDeparture(Date dateOfDeparture) {

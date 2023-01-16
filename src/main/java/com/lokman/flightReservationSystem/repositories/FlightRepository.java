@@ -11,8 +11,8 @@ import com.lokman.flightReservationSystem.entities.Flight;
 
 public interface FlightRepository extends JpaRepository<Flight, Long> {
 
-	@Query("from Flight where departureCity=:departureCity and arrivalCity=:arivalCity and dateOfDeparture=:dateOfDeparture")
-	List<Flight> findFlights(@Param("departureCity") String from, @Param("arivalCity") String to,
+	@Query("from Flight where departureCity=:departureCity and arrivalCity=:arrivalCity and dateOfDeparture=:dateOfDeparture")
+	List<Flight> findFlights(@Param("departureCity") String from, @Param("arrivalCity") String to,
 			@Param("dateOfDeparture") Date departureDate);
 
 }
