@@ -7,8 +7,16 @@ package com.lokman.flightReservationSystem.Dtos;
 
 public class ReservationRequestDto {
 	
-	private Long id;
+	private Long flightId;
 	
+	public Long getFlightId() {
+		return flightId;
+	}
+
+	public void setFlightId(Long flightId) {
+		this.flightId = flightId;
+	}
+
 	private String passengerFirstName;
 	
 	private String passengerLastName;
@@ -25,14 +33,7 @@ public class ReservationRequestDto {
 	
 	private String securityCode;
 	
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
+	
 	public String getPassengerFirstName() {
 		return passengerFirstName;
 	}
