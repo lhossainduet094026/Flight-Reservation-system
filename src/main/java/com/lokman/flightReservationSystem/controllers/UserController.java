@@ -20,6 +20,11 @@ public class UserController {
 	public String showRegistrationPage() {
 		return "login/registerUser";
 	}
+	
+	@GetMapping("/showLogin")
+	public String showLoginPage() {
+		return "login/login";
+	}
 
 	@PostMapping("/registerUser")
 	public String registerUser(@ModelAttribute("user") User user) {

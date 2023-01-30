@@ -27,6 +27,7 @@ public class ReservationServiceImpl implements ReservationService {
 	@Autowired
 	private PassengerRepository passengerRepository;
 
+	@Autowired
 	private ReservationRepository reservationRepository;
 
 	@Override
