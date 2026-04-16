@@ -1,12 +1,11 @@
 # ✈️ Flight Reservation System (Microservice-Based Project)
 
 ## 📌 Overview
-The **Flight Reservation System** is a Spring Boot-based backend application designed for managing flight bookings and reservations.
+The **Flight Reservation System** is a Spring Boot-based backend application for managing flight bookings and reservations.
 
-This project is part of a **microservice-oriented system**, where multiple independent services communicate using REST APIs.  
-The Flight Reservation Service works together with the Flight Check-In Service to complete the full booking and check-in workflow.
+It is designed following microservice principles, where services communicate via REST APIs. This service collaborates with the Flight Check-In Service to handle the complete booking and check-in workflow.
 
-The system demonstrates real-world backend development concepts such as layered architecture, RESTful APIs, and service-to-service communication.
+The project demonstrates key backend engineering concepts including layered architecture, RESTful API design, and inter-service communication in a distributed system.
 
 ---
 
@@ -80,7 +79,7 @@ POST /reservations
 
 ## 📂 Project Structure
 
-
+```
 src/main/java/com/yourpackage/
 │
 ├── controller/
@@ -108,7 +107,7 @@ src/main/java/com/yourpackage/
 └── dto/
 ├── ReservationRequestDto.java
 └── ReservationUpdateRequestDto.java
-
+```
 ---
 
 ## 🔄 Application Flow
@@ -219,6 +218,18 @@ CREATE TABLE user (
 git clone https://github.com/your-username/flight-reservation-system.git
 
 2. Configure database in application.properties
+
+## Database Setup
+
+- Create database:
+   CREATE DATABASE reservation;
+
+- Update application.properties:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/reservation
+spring.datasource.username=root
+spring.datasource.password=root
+
 3. Run the application
 mvn spring-boot:run
 
