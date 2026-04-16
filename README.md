@@ -1,4 +1,4 @@
-# ✈️ Flight Reservation System (Microservice-Based Project)
+# ✈️ Flight Reservation System 
 
 ## 📌 Overview
 The **Flight Reservation System** is a Spring Boot-based backend application for managing flight bookings and reservations.
